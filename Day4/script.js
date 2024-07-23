@@ -44,3 +44,27 @@ do{
 console.log(`The factorial of a ${number} is ${fact}.`);
 
 // nested loop
+let star = 4;
+for(let i=1; i<=star; i++){
+    let row = '';
+    for(let j=1; j<=i; j++){
+        row += "*";
+    }
+   console.log(row);
+}
+// loop control statements
+for(let i=1; i<11; i++){
+    if(i===5){
+        continue;
+    }else{
+        console.log(i);
+    }
+}
+
+for(let j=1; j<=10; j++){
+    if(j==7){
+        break;
+    }else{
+        console.log(j);
+    }
+}
