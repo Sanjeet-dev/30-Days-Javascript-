@@ -11,7 +11,11 @@ const book = {
         console.log("previous publish year: ",book.year);
         book.year = 1946;
         return book.year;
+    },
+    useThis: function(title,year){
+        return this.title+" "+this.year;
     }
+
 };
 console.log(book);
 console.log(`The title of the book: ${book.title} \n Author of the book: ${book.author}`);
@@ -34,4 +38,22 @@ console.log("Name of the Library: ",library.name);
 for(let i=0; i<library.books.length; i++){
     console.log(library.books[i].title);
 }
+
+// this keyword
+const res = book.useThis();
+console.log(res);
+
+// Object Iteration
+for(let ele in book){
+    console.log("key: "+ele+ ", Value: "+book[ele]);
+}
+
+// Object.key and Object.values
+
+const key = Object.keys(book);
+const val = Object.values(book);
+const entry = Object.entries(book);
+console.log(key);
+console.log(val);
+console.log(entry);
 
