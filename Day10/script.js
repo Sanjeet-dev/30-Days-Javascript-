@@ -1,6 +1,6 @@
 // Day 10 Event Handling
 
-// Basic Event handling
+// 1.Basic Event handling
 
 // Task1
 const btn = document.getElementById("para-changer");
@@ -15,7 +15,7 @@ image.addEventListener("dblclick",()=>{
 })
 
 
-// Mouse Events
+// 2.Mouse Events
 
 //. Task3
 const circle = document.getElementById("circle");
@@ -30,7 +30,7 @@ circle.addEventListener("mouseout",()=>{
 
 
 
-//Keyboard Events
+// 3.Keyboard Events
 //Task 5
 const input = document.querySelector("input");
 input.addEventListener("keydown",(event)=>{
@@ -43,3 +43,31 @@ input.addEventListener("keyup",()=>{
     para.textContent=input.value;
 })
 
+
+// 4.Form Events
+
+// Task 7
+const form = document.querySelector("form");
+const submitter = document.querySelector("#submit");
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    console.log("submit button clicked");
+    const formData = new FormData(form,submitter);
+
+
+    for(const [key,value] of formData){
+        const output = `${key}: ${value}\n`;
+        console.log(output);
+    }
+
+    
+})
+// Task 8
+const dropdown = document.querySelector("#dropdown");
+dropdown.addEventListener("change",()=>{
+    const selectedValue = dropdown.value;
+    document.querySelector("#drop").textContent= `Selected value: ${selectedValue}`;
+
+});
+
+// Event Delegation

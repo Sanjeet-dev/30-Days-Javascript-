@@ -32,6 +32,15 @@
             color:blueviolet;
             background-color:aqua;
         }
+        #submit{
+            height:4rem;
+            width:7rem;
+            color:white;
+            background-color:black;
+            letter-spacing:0.7px;
+            cursor:pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -42,8 +51,31 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtvLTLJaR7oupK9Zh6LRpBleBNclwERQs8wg&s" alt="Tokyo">
 
     <div id="circle"></div>
-    <input type="text" />
-    <p class="input-change"></p>
+    
+    <form action="">
+        <label for="text">Information</label>
+        <input id="text" type="text" />
+        <p class="input-change"></p>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">mail</option>
+            <option value="option2">username</option>
+            <option value="option3">country</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="drop"></p>
+    
     <script src="script.js"></script>
     
 </body>
