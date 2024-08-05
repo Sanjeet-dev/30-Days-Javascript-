@@ -71,3 +71,18 @@ dropdown.addEventListener("change",()=>{
 });
 
 // Event Delegation
+// Task 9
+const orderedList = document.querySelector("#list");
+
+orderedList.addEventListener("click",(event)=>{
+    if(event.target && event.target.matches("li")){
+        console.log("child button clicked: "+event.target.textContent);
+    }
+
+})
+
+// Task 9
+const listItem = document.createElement("li");
+listItem.textContent="MongoDB";
+listItem.className="newItem";
+orderedList.appendChild(listItem);
