@@ -18,4 +18,28 @@ image.addEventListener("dblclick",()=>{
 // Mouse Events
 
 //. Task3
+const circle = document.getElementById("circle");
+circle.addEventListener("mouseover",()=>{
+    circle.style.backgroundColor="cyan";
+    circle.style.cursor="pointer";
+})
+//Task 4
+circle.addEventListener("mouseout",()=>{
+    circle.style.backgroundColor="white";
+})
+
+
+
+//Keyboard Events
+//Task 5
+const input = document.querySelector("input");
+input.addEventListener("keydown",(event)=>{
+    console.log(input.value);
+});
+
+// Task 6
+input.addEventListener("keyup",()=>{
+    const para = document.querySelector(".input-change");
+    para.textContent=input.value;
+})
 
