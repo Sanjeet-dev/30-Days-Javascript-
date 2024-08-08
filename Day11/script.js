@@ -103,8 +103,8 @@ async function myFunction() {
 
 // promise.race
 const promises = [
-    new Promise((resolve)=>setTimeout(()=>resolve("one"),100)),
-    new Promise((resolve)=> setTimeout(()=>resolve("two"),500))
+    new Promise((resolve)=>setTimeout(()=>resolve("one"),2000)),
+    new Promise((resolve)=> setTimeout(()=>resolve("two"),1000))
 ];
 
 Promise.race(promises)
