@@ -104,3 +104,34 @@ async function handlePromise(){
     }
 }
 handlePromise()
+
+// Graceful Error Handling in Fetch
+function fetchInvalidData(){
+    fetch("https://invalid-url.example.com/data")
+    .then((response)=>{
+        if(!response.ok){
+            throw new Error("HTTP error! ", response.status);
+        }
+        return response.json();
+    })
+    .then((data)=> console.log("data received: ",data))
+    .catch(error => console.log("Error Caught",error));
+}
+fetchInvalidData();
+
+// async/await Error Handling
+
+async function fetchNotValidData(){
+    try{
+        const response = await fetch('https://api.example.com/data');
+        if(!response.ok){
+            throw new Error(`HTTP issue ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+    }catch(error){
+        console.log("Let's see the error",error);
+    }
+
+}
+fetchNotValidData();
